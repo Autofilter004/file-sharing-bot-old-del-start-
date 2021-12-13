@@ -4,7 +4,7 @@ import pyromod.listen
 from pyrogram import Client
 import sys
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID
+from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, CHANNEL_ID
 
 class Bot(Client):
     def __init__(self):
@@ -23,16 +23,7 @@ class Bot(Client):
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
-
-        if FORCE_SUB_CHANNEL:
-            try:
-                link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
-                self.invitelink = link
-            except:
-                self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
-                self.LOGGER(__name__).warning("Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission")
-                self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/wolfpackmedia for support")
-                sys.exit()
+        
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
             self.db_channel = db_channel
