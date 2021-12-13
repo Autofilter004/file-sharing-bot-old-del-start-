@@ -72,4 +72,4 @@ async def start_command(client: Client, message: Message):
         return
 
 
-(client: ll
+
