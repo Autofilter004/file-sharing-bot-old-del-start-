@@ -14,9 +14,11 @@
       "description": "Your Bot token, Get it from @Botfather",
       "value": ""
     },
-    "OWNER_ID": {
-      "description": "An integer of consisting of your owner ID",
-      "value": "1250450587"
+    "CUSTOM_CAPTION": {
+      "description": "Your file will be caption",
+      "value": "<code>{filename}</code>
+
+<b>➥ ᴏᴡɴᴇʀ  : @mhd_thanzeer</b>"
     },
     "APP_ID":{
       "description": "your app id, take it from my.telegram.org",
@@ -34,9 +36,9 @@
       "description": "id of the channel or group, if you want enable force sub feature else put 0",
       "value": "0"
     },
-    "START_MESSAGE": {
-      "description": "Optional: start message of bot, use HTML parsemode format",
-      "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
+    "DISABLE_CHANNEL_BUTTON": {
+      "description": "True or False",
+      "value": "True"
     },
     "ADMINS": {
       "description": "A space separated list of user_ids of Admins, they can only create links",
