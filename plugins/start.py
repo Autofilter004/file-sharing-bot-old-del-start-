@@ -8,7 +8,6 @@ from pyrogram.errors import FloodWait
 from bot import Bot
 from config import ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
 
-            try:
                 start = int(int(argument[1]) / abs(client.db_channel.id))
                 end = int(int(argument[2]) / abs(client.db_channel.id))
             except:
