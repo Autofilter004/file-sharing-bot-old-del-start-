@@ -66,4 +66,4 @@ async def get_message_id(client, message):
     else:
         return 0
 
-subscribed = filters.create(is_subscribed)
+
